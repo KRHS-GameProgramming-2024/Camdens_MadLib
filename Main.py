@@ -31,7 +31,7 @@ def Madlibs(debug = False):
 				if choice == 1:
 					menuChoice1 = True
 					print(Story1(debug))
-					end = 
+					end = Story1(debug)
 					if end == 2:
 						print(winScreen(debug))
 					else:

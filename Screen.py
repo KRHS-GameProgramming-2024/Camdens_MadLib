@@ -1,3 +1,4 @@
+from PIL import Image
 def startScreen(debug = False):
 	if debug: print("Welcome to start screen debug")
 
@@ -109,23 +110,53 @@ def storySelectScreen3(debug = False):
 	return z
 	
 def winScreen(debug = False):
-	if debug: print("Welcome to story select screen debug")
+	if debug: print("Welcome to win screen debug")
 
 	z =  " ____________________________________ \n"
+	z += "| _       _                          |\n"
+	z += "| \\\\     //    ____       _    _     |\n"
+	z += "|  \\\\   //    /    \\     | |  | |    |\n"
+	z += "|   \\\\_//    /  __  \\    | |  | |    |\n"
+	z += "|    | |    |  |__|  |   | |  | |    |\n"
+	z += "|    | |     \\      /    | |__| |    |\n"
+	z += "|    |_|      \\____/     \\______/    |\n"	
 	z += "|                                    |\n"
-	z += "|  \     /     ____                  |\n"
-	z += "|   |   |     /    \     |      |    |\n"
-	z += "|    \_/     /      \    |      |    |\n"
-	z += "|     |     |        |   |      |    |\n"
-	z += "|     |      \      /    |      |    |\n"
-	z += "|     |       \____/     \______/    |\n"	
-	z += "|                                    |\n"
-	z += "|                ____                |\n"
-	z += "| |         |   /    \   |_____      |\n"
-	z += "| \         /  /      \  |     \     |\n"
-	z += "|  \       /  |        | |      |    |\n"
-	z += "|   |  |  |    \      /  |      |    |\n"
-	z += "|    \/ \/      \____/   |      |    |\n"	
+	z += "|  _       _     ____     _          |\n"
+	z += "| | |     | |   /    \\   | |___      |\n"
+	z += "| \\ \\  _  / /  /  __  \\  |  __ \\     |\n"
+	z += "|  \\ \\/ \/ /  |  |__|  | | |  \\ |    |\n"
+	z += "|   |  |  |    \\      /  | |  | |    |\n"
+	z += "|    \\/ \\/      \\____/   |_|  |_|    |\n"	
 	z += "|____________________________________|\n"
 	
 	return z
+	
+def loseScreen(debug = False):
+	if debug: print("Welcome to death screen debug")
+
+	z =  " ____________________________________ \n"
+	z += "| _       _                          |\n"
+	z += "| \\\\     //    ____       _    _     |\n"
+	z += "|  \\\\   //    /    \\     | |  | |    |\n"
+	z += "|   \\\\_//    /  __  \\    | |  | |    |\n"
+	z += "|    | |    |  |__|  |   | |  | |    |\n"
+	z += "|    | |     \\      /    | |__| |    |\n"
+	z += "|    |_|      \\____/     \\______/    |\n"	
+	z += "|                                    |\n"
+	z += "|   ____     _    ____    ____       |\n"
+	z += "|  |  _ \\   |_|  |  __|  |  _ \\      |\n"
+	z += "|  | | \\ |   _   | |__   | | \\ |     |\n"
+	z += "|  | | | |  | |  |  __|  | | | |     |\n"
+	z += "|  | |_/ |  | |  | |__   | |_/ |     |\n"
+	z += "|  |____/   |_|  |____|  |____/      |\n"	
+	z += "|____________________________________|\n"
+	
+	return z
+
+def DK(debug = False):
+	if debug: print("Welcome to DK screen debug")
+	
+	file = "C://Users/Student/Documents/Camden's Folder/2023-09-08 08.37.22 www.youtube.com 542b04b57db5.png"
+	img = Image.open(file)
+	
+	return img

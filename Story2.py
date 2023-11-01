@@ -36,21 +36,21 @@ def Story2(debug = False):
 		out += "As you run to Mc Donalds the " + creature1 + " gets enticed by a Big Mac and runs into the store forgoing chasing you.\n"
 		out += "A " + grandma1 + " year old grandma named " + grandma2 + " hits the " + creature1 + " with her brand new " + shoe1 + ".\n"
 		out += "The " + creature1 + " starts to burn, since grandmas called " + grandma2 + " is its only weakness.\n"
-		out += "You Won\n"
 		out += "\n"
+		out += winScreen(debug)
 	else:
 		out += "You ran into " + store1 + " and shut the door grabing a " + object1 + " to block it with.\n"
 		out += "The " + creature1 + " trys to break though the door but can't since the " + object1 + " is to strong.\n"
 		out += "The " + creature1 + " walks away realizing that he won't be able to break in, then you see your grandma " + grandma2 + ".\n"
 		if decision == "yes":
 			out += "You decide to let your grandma in but then she shapeshifts and eats you like you were " + food1 + ".\n"
-			out += "You Died\n"
 			out += "\n"
+			out += loseScreen(debug)
 		elif decision == "no":
 			out += "She asks to come into the store, but you say no and then call the cops on her.\n"
 			out += "As the the cops handcuff her and put her into their car you realize she wasn't the shapeshifter, oops.\n"
 			out += "But hey, at least you didn't die.\n"
-			out += "You Won\n"
 			out += "\n"
+			out += winScreen(debug)
 	
 	return out

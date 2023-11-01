@@ -4,7 +4,7 @@ from Screen import *
 def Story1(debug = False):
 	if debug: print("Story 1 Function")
 	
-	friendName = getMadlibOption("Enter a name: ", debug)
+	friendName = getMadlibOption("Enter your name: ", debug)
 	thing1 = getMadlibOption("Enter an object: ", debug)
 	bodyPart = getMadlibOption("Enter an appendage: ", debug)
 	place1 = getMadlibOption("Enter a place: ", debug)
@@ -26,20 +26,21 @@ def Story1(debug = False):
 		
 	
 	out = "\n"
-	out += friendName + " was walking in the woods when he spotted a " + thing1 + ".\n"
-	out += "He walked over to it and suddenly a " + bodyPart + " grabbed him and dragged him undeneath the " + place1 + ".\n"
-	out += "He saw some sort of " + event1 + " going on and decide to " + decision + ".\n"
+	out += playerName + " was walking in the woods when you spotted a " + thing1 + ".\n"
+	out += "You walked over to it and suddenly a " + bodyPart + " grabbed him and dragged him undeneath the " + place1 + ".\n"
+	out += "You saw some sort of " + event1 + " going on and decide to " + decision + ".\n"
 	if yes == "yes":
 		out += "As you walked over you realized that they were all " + evilName + " suddenly " + number1 + " " + evilName + "s jumped on you.\n"
 		out += "You slam onto the ground and got the life sucked out of you by the " + evilName + "s like they were " + zeldaMonster + "s.\n"
-		out += "You Died\n"
-		endScreen = 1
+		out += "\n"
+		out += loseScreen(debug)
 	elif yes == "no":
-		out += "Suddenly " + number1 + " figures chased after you from the " + event1 + " as they got closer you realized that they were all " + evilName + ".\n"
+		out += "Suddenly " + number1 + " figures chased after you from the " + event1 + "\n"
+		out += "As they got closer you realized that they were all " + evilName + ".\n"
 		out += "Out of nowhere a " + zeldaMonster + " took out all of the " + evilName + "s.\n"
 		out += "As you continued to run you finaly found the exit and made it out alive\n"
 		out += "\n"
-		endScreen = 2
+		out += winScreen(debug)
 		
 		
-	return out and endScreen
+	return out

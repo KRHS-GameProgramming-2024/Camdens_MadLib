@@ -1,10 +1,11 @@
 from Getters import *
 from Screen import *
+import os
 
 def Story1(debug = False):
 	if debug: print("Story 1 Function")
 	
-	friendName = getMadlibOption("Enter your name: ", debug)
+	playerName = getMadlibOption("Enter your name: ", debug)
 	thing1 = getMadlibOption("Enter an object: ", debug)
 	bodyPart = getMadlibOption("Enter an appendage: ", debug)
 	place1 = getMadlibOption("Enter a place: ", debug)
@@ -23,6 +24,7 @@ def Story1(debug = False):
 	evilName = getMadlibOption("Enter another name: ", debug)
 	number1 = getMadlibOptionNumber("Enter a number 1-10: ", 1, 10, debug)
 	zeldaMonster = getMadlibOptionZeldaMonster("Enter Zelda enemy: ", debug)
+	os.system("cls")
 		
 	
 	out = "\n"

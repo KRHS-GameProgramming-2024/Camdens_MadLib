@@ -1,8 +1,9 @@
 from Getters import *
 from Screen import *
+import os
 
 def Story2(debug = False):
-	if debug: print("Story 1 Function")
+	if debug: print("Story 2 Function")
 	
 	friendName = getMadlibOption("Enter a name: ", debug)
 	vegtable1 = getMadlibOption("Enter a veggietable: ", debug)
@@ -26,6 +27,7 @@ def Story2(debug = False):
 		else:
 			decide = False
 	food1 = getMadlibOption("Enter a mealtime: ", debug)
+	os.system("cls")
 	
 	out = "\n"
 	out += "As you exit the cave you see your friend, " + friendName + ".  As you run up to greet him he stabs you with a " + vegtable1 + ".\n"

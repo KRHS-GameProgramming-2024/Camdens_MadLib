@@ -50,7 +50,45 @@ def getMadlibOption(prompt, debug = False):
 			
 	
 			
-	return word			
+	return word	
+	
+def getWeapon(prompt, debug = False):
+	if debug: print("getMadlibOptionZeldaMonster Functions")
+	
+	goodInput = False	
+	
+	
+	
+	while not goodInput:
+		word = input(prompt)  
+		if isWeapon(word):
+			if word.lower() == "gun":
+				word = "banana"
+			elif word.lower() == "sword":	
+				word = "cucumber"
+			goodInput = True
+		else:
+			print("ERROR")
+			goodInput = False
+	
+			
+	return word	
+	
+def isWeapon(word, debug = False):
+	if debug: print("Weapon Functions")
+	
+	if word.lower() == "gun":
+		word = "banana"
+		print("Due to school protocols your response has been change to " + word + ".")
+		time.sleep(2)		
+		return True
+	elif word.lower() == "sword":		
+		word = "cucumber"
+		print("Due to school protocols your response has been change to " + word + ".")	
+		return True
+	else:
+		return False		
+
 
 def isSwear(wordCheck, debug = False):
 	if debug: print("isSwear Functions")

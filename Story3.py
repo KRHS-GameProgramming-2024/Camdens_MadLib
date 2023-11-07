@@ -8,51 +8,81 @@ import random
 def Story3(debug = False):
 	if debug: print("Story 3 Function")
 	
+	EHP = 8
+	UHP = 8
+	defense = 1
 	EvilName = getMadlibOption("Enter a name: ", debug)
 	weapon = getWeapon("Enter a weapon: ", debug)
-	dolphine = random.randint(1, 10)
+	dolphin = random.randint(1, 10)
+	charge = 0
 	
 	os.system("cls")
-	print(Story3a(debug))
+	print(Story3a(EHP, UHP, debug))
 	print(EvilName + " approaches you")
+	var = 0
+	time.sleep(1)
 	action = False
 	while action == False:
+		if var > 0:
+			print(Story3a(EHP, UHP, debug))
+		var += 1
 		act = input("Attack or Defend, A/D: ")
 		os.system("cls")	
 		if act.lower() == "a":
 			print(Story3acttack(debug))
+			EHP -= 1
+			if EHP <= 0:
+				os.system("cls")
+				print(winScreen(debug))
+				break
+			print(Story3a(EHP, UHP, debug))
 			time.sleep(.2)
 			os.system("cls")
-			print(Story3b(debug))
-			action = True
 		elif act.lower() == "d":
-			print(Story3d(debug))
-			action = True
+				print(Story3d(EHP, UHP, debug))
+				defense += 1
+				time.sleep(2)
+				action = True
 		else:
 			print("ERROR")
 			action = False
-		time.sleep(2)
 		os.system("cls")
 		if charge == 1:
 			print(dolphine(debug))
 			print(EvilName + " summons dolphin")
+			UHP -= round(4/defense)
 			charge -= 1
-		if dolphine = 1:
+			defense = 1
+			if UHP <= 0:
+				os.system("cls")
+				print(loseScreen(debug))
+				break
+			time.sleep(1)
+			action = False
+		elif dolphin == 1:
+			print(ZipZamWhamBoomBam(debug))
 			print(EvilName + " is charging up an attack")
 			charge = 1
-			dolphine += 1
+			dolphin += 1
+			defense = 1
+			time.sleep(1)
+			action = False
 		else:
-			dolphine += 1
-			if dolphine = 11:
-				dolphine = 1
+			dolphin += 1
+			if dolphin == 11:
+				dolphin = 1
 			if weapon == "banana":
 				print(Story3nanner(debug))
 				print(EvilName + " uses " + weapon)
 				time.sleep(1)
 				os.system("cls")
-				print(Story3e(debug))
-		
-		else:
-			print("hmm")
+				UHP -= round(1/defense)
+				defense = 1
+				if UHP <= 0:
+					os.system("cls")
+					print(loseScreen(debug))
+					break
+				action = False
+
 
 

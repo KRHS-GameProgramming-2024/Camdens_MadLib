@@ -1,7 +1,13 @@
 from Story3 import *
 
-def Story3a(SP, EHP, UHP, debug = False):
+def Story3a(power, SP, EHP, UHP, debug = False):
 	if debug: print("Story 3a Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
 	if SP == 0:
 		FP = " _____ "
 	elif SP == 1:
@@ -48,13 +54,13 @@ def Story3a(SP, EHP, UHP, debug = False):
 		YouHP = "▇▇▁▁▁▁▁▁"
 	elif UHP == 1:
 		YouHP = "▇▁▁▁▁▁▁▁"
-	elif EHP <= 0:
+	elif UHP <= 0:
 		YouHP = "▁▁▁▁▁▁▁▁"
 	
 	z =  " ____________________________________ \n"
 	z += "| HP:            ___                 |\n"
 	z += "|[" + HimHP + "]     /. .\\                |\n"
-	z += "|              [  V  ]               |\n"
+	z += "|              [  " + mouth + "  ]               |\n"
 	z += "|               \\___/                |\n"
 	z += "|                /|\\                 |\n"
 	z += "|               / | \\                |\n"
@@ -74,8 +80,14 @@ def Story3a(SP, EHP, UHP, debug = False):
 	
 	return z
 
-def Story3d(SP, EHP, UHP, debug = False):
+def Story3d(power, SP, EHP, UHP, debug = False):
 	if debug: print("Story 3d Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
 	if SP == 0:
 		FP = " _____ "
 	elif SP == 1:
@@ -128,7 +140,7 @@ def Story3d(SP, EHP, UHP, debug = False):
 	z =  " ____________________________________ \n"
 	z += "| HP:            ___                 |\n"
 	z += "|[" + HimHP + "]     /. .\\                |\n"
-	z += "|              [  V  ]               |\n"
+	z += "|              [  " + mouth + "  ]               |\n"
 	z += "|               \\___/                |\n"
 	z += "|                /|\\                 |\n"
 	z += "|               / | \\                |\n"
@@ -148,8 +160,14 @@ def Story3d(SP, EHP, UHP, debug = False):
 	
 	return z
 
-def Story3c(SP, EHP, UHP, debug = False):
+def Story3c(power, SP, EHP, UHP, debug = False):
 	if debug: print("Story 3d Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
 	if SP == 0:
 		FP = " _____ "
 	elif SP == 1:
@@ -196,13 +214,13 @@ def Story3c(SP, EHP, UHP, debug = False):
 		YouHP = "▇▇▁▁▁▁▁▁"
 	elif UHP == 1:
 		YouHP = "▇▁▁▁▁▁▁▁"
-	elif EHP <= 0:
+	elif UHP <= 0:
 		YouHP = "▁▁▁▁▁▁▁▁"
 		
 	z =  " ____________________________________ \n"
 	z += "| HP:            ___                 |\n"
 	z += "|[" + HimHP + "]     /. .\\                |\n"
-	z += "|              [  V  ]               |\n"
+	z += "|              [  " + mouth + "  ]               |\n"
 	z += "|               \\___/                |\n"
 	z += "|                /|\\                 |\n"
 	z += "|               / | \\                |\n"
@@ -226,8 +244,8 @@ def Story3acttack(debug = False):
 	
 	z =  " ____________________________________ \n"
 	z += "|                ___        .-       |\n"
-	z += "|               /. .\\      //        |\n"
-	z += "|              [  ^  ]   ,/:         |\n"
+	z += "|               /o o\\      //        |\n"
+	z += "|              [  0  ]   ,/:         |\n"
 	z += "|               \\___/   /[}          |\n"
 	z += "|                /|\\  /|/            |\n"
 	z += "|               / |,/'/'             |\n"
@@ -249,8 +267,8 @@ def Story3acttackB(debug = False):
 	
 	z =  " ____________________________________ \n"
 	z += "|       -.       ___                 |\n"
-	z += "|         \\\\    /. .\\                |\n"
-	z += "|          :\\. [  ^  ]               |\n"
+	z += "|         \\\\    /o o\\                |\n"
+	z += "|          :\\. [  0  ]               |\n"
 	z += "|           {]\\ \\___/                |\n"
 	z += "|            \\|\\ /|\\                 |\n"
 	z += "|             '\\'\\. \\                |\n"
@@ -267,12 +285,18 @@ def Story3acttackB(debug = False):
 	
 	return z
 
-def Story3nanner(debug = False):
+def Story3nanner(power, debug = False):
 	if debug: print("Story 3 banana Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
 	z =  " ____________________________________ \n"
 	z += "|                ___                 |\n"
 	z += "|               /. .\\                |\n"
-	z += "|              [  V  ]               |\n"
+	z += "|              [  " + mouth + "  ]               |\n"
 	z += "|               \\___/                |\n"
 	z += "|                /|\\                 |\n"
 	z += "|               / | \\  _,---._       |\n"
@@ -286,6 +310,56 @@ def Story3nanner(debug = False):
 	z += "|              \\\\\\|///               |\n"	
 	z += "|                [|]                 |\n"
 	z += "|____________________________________|\n"
+	
+	return z
+
+def Story3cuke(power, debug = False):
+	if debug: print("Story 3 cucumber Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
+	z =  " ____________________________________ \n"
+	z += "|                ___                 |\n"
+	z += "|               /. .\\      _         |\n"
+	z += "|              [  " + mouth + "  ]    //         |\n"
+	z += "|               \\___/    //          |\n"
+	z += "|                /|\\    //           |\n"
+	z += "|               / | \\  //            |\n"
+	z += "|              /  |  \\//             |\n"
+	z += "|                 |  //              |\n"
+	z += "|                 |  '               |\n"
+	z += "|                / \\                 |\n"
+	z += "|               /   \\                |\n"	
+	z += "|              /     \\               |\n"
+	z += "|             |||||||||              |\n"
+	z += "|              \\\\\\|///               |\n"	
+	z += "|                [|]                 |\n"
+	z += "|____________________________________|\n"
+	
+	return z
+
+def Story3pumpkin(debug = False):
+	if debug: print("Story 3 pumpkin Function")
+	z = " ___________________________________ \n"
+	z += "|             ___         __	    |\n"
+	z += "|            /. .\\        \\ \\       |\n"
+	z += "|           [ ~.~ ]    ___|__|___   |\n" 
+	z += "|       ✊   \\___/    // /    \\ \\\\  |\n"
+	z += "|        \\    /|\\     || |     | || |\n"
+	z += "|         \\  / | \\    || |     | || |\n"
+	z += "|          \\/  |  \\___\\\\ |     | || |\n"
+	z += "|	       |       \\\\_\\___/_//  |\n"
+	z += "|	       |                    |\n"  
+	z += "|	      / \\                   |\n"
+	z += "|            /   \\                  |\n"
+	z += "|           /     \\                 |\n"
+	z += "|          |||||||||                |\n"
+	z += "|           \\\\\\|///                 |\n"
+	z += "|             [|]                   |\n"
+	z += "|___________________________________|\n"
 	
 	return z
 
@@ -311,12 +385,18 @@ def dolphine(debug = False):
 	
 	return z
 
-def ZipZamWhamBoomBam(debug = False):
+def ZipZamWhamBoomBam(power, debug = False):
 	if debug: print("Story 3 dolphine Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"
 	z =  " ____________________________________ \n"
 	z += "|             _/ ___ \\_              |\n"
 	z += "|           __\\ /. .\\ /__            |\n"
-	z += "|         __\\  [  V  ]  /__          |\n"
+	z += "|         __\\  [  " + mouth + "  ]  /__          |\n"
 	z += "|         \\     \\___/     /          |\n"
 	z += "|          \\     /|\\     /           |\n"
 	z += "|         __\\   / | \\   /__          |\n"
@@ -330,5 +410,33 @@ def ZipZamWhamBoomBam(debug = False):
 	z += "|              \\\\\\|///               |\n"	
 	z += "|                [|]                 |\n"
 	z += "|____________________________________|\n"	
+	
+	return z
+def Story3banjo(power, debug = False):
+	if debug: print("Story 3 banjo Function")
+	if power == 1:
+		mouth = "V"
+	if power == 2:
+		mouth = "-"
+	if power == 3:
+		mouth = "^"	
+	z =  " ____________________________________ \n"
+	z += "|                ___                 |\n"
+	z += "|               /. .\\                |\n"
+	z += "|              [  " + mouth + "  ]'{}'           |\n"
+	z += "|               \\___/'{}'            |\n"
+	z += "|                /| \\//              |\n"
+	z += "|               / | //\\              |\n"
+	z += "|              /  |//__\\             |\n"
+	z += "|                _//                 |\n"
+	z += "|               /   \\                |\n"
+	z += "|              | /// |               |\n"
+	z += "|               \\___/                |\n"
+	z += "|               /   \\                |\n"
+	z += "|              /     \\               |\n"
+	z += "|             |||||||||              |\n"
+	z += "|              \\\\\\|///               |\n"
+	z += "|                [|]                 |\n"
+	z += "|____________________________________|\n"
 	
 	return z

@@ -8,7 +8,7 @@ import os
 
 def Madlibs(debug = False):
 	if debug: print("Welcome to Madlibs debug")
-	
+
 	print(startScreen(debug))
 	input()
 	os.system("cls")

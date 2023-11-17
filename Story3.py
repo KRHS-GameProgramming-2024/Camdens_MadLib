@@ -5,10 +5,11 @@ import os
 import time
 import random
 
-
+#Easter egg/Improvement
 def Story3(debug = False):
 	if debug: print("Story 3 Function")
 	
+	Phase = 1
 	SP = 0
 	EHP = 8
 	UHP = 8
@@ -18,7 +19,7 @@ def Story3(debug = False):
 	EvilName = getMadlibOption("Enter a name: ", debug)
 	dolphineName = getMadlibOption("Enter another name: ", debug)
 	weapon = getWeapon("Enter a generic weapon: ", debug)
-	dolphin = random.randint(1, 6)
+	dolphin = random.randint(1, 5)
 	charge = 0
 	os.system("cls")
 	print(Story3a(power, SP, EHP, UHP, debug))
@@ -42,7 +43,7 @@ def Story3(debug = False):
 			SP += 1
 			if SP > 5:
 				SP = 5
-			EHP -= 1
+			EHP -= Phase + 1
 			os.system("cls")
 			if power == 1 and EHP <= 5:
 				power = 2
@@ -57,19 +58,31 @@ def Story3(debug = False):
 			if notice == 2:
 				print(EvilName + " is getting mad")
 				notice = 0
+			action = True
+			if EHP <= 0 and Phase == 1:
+				Phase = 2
+				EHP = 0
+				print("ARG, how could I lose")
+				time.sleep(2)
+				os.system("cls")
+				print(Story3mad(debug))
+				print("No, I'm not giving up just yet")
+				time.sleep(2)
+				os.system("cls")
+				for x in range(8):
+					print(Story3a(power, SP, EHP, UHP, debug))
+					EHP += 1
+					time.sleep(.1)
+					os.system("cls")
+					action = False
+				print(Story3a(power, SP, EHP, UHP, debug))
+			time.sleep(2)
 			if EHP <= 0:
 				print("ARG, how could I lose")
 				time.sleep(2)
-				print("No, I'm not giving up just yet")
-				for x in range(8):
-					print(Story3a(power, SP, EHP, UHP, debug))
-					time.sleep(.1)
-			time.sleep(2)
-			if EHP <= 0:
 				os.system("cls")
 				print(winScreen(debug))
 				break
-			action = True
 			os.system("cls")
 		elif act.lower() == "d":
 			SP += 1
@@ -114,22 +127,31 @@ def Story3(debug = False):
 			if notice == 2:
 				print(EvilName + " is getting mad")
 				notice = 0
-			if EHP <= 0:
+			action = True
+			if EHP <= 0 and Phase == 1:
+				Phase = 2
+				EHP = 0
 				print("ARG, how could I lose")
 				time.sleep(2)
+				os.system("cls")
+				print(Story3mad(debug))
 				print("No, I'm not giving up just yet")
 				time.sleep(2)
+				os.system("cls")
 				for x in range(8):
 					print(Story3a(power, SP, EHP, UHP, debug))
 					EHP += 1
 					time.sleep(.1)
 					os.system("cls")
+					action = False
+				print(Story3a(power, SP, EHP, UHP, debug))
 			time.sleep(2)
 			if EHP <= 0:
+				print("ARG, how could I lose")
+				time.sleep(2)
 				os.system("cls")
 				print(winScreen(debug))
 				break
-			action = True
 		else:
 			print("ERROR")
 			time.sleep(1)
@@ -139,7 +161,7 @@ def Story3(debug = False):
 			if charge == 1:
 				print(dolphine(debug))
 				print(EvilName + " summons " + dolphineName + " the dolphin")
-				UHP -= round(6/defense)
+				UHP -= round((power*2)/defense)
 				charge -= 1
 				defense = 1
 				time.sleep(2)

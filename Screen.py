@@ -89,7 +89,7 @@ def storySelectScreen2(debug = False):
 	
 def storySelectScreen3(debug = False):
 	if debug: print("Welcome to story select screen debug")
-
+	#Improvement
 	z =  " ____________________________________ \n"
 	z += "|    _                               |\n"
 	z += "| <---' Press B                      |\n"

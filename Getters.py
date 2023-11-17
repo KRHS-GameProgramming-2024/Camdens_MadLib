@@ -19,6 +19,7 @@ def getMenuOption(debug = False):
 		elif option == "B":			
 			option = 10
 			goodInput = True
+		#Easter Egg
 		elif option == "Unlock All":			
 			option = 101
 			goodInput = True

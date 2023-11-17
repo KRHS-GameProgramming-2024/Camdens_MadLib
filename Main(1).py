@@ -104,7 +104,7 @@ def Madlibs(debug = False):
 					print(Story3(debug))
 					input("Press Enter to continue")
 					os.system("cls")
-					menuChoice4 = False
+					menuChoice3 = False
 				elif choice == 10:
 					menuChoice3 = True
 					menu = False

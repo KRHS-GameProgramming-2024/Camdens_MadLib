@@ -66,11 +66,6 @@ def Madlibs(debug = False):
 					print(Story2(debug))
 					input("Press Enter to continue")
 					os.system("cls")
-					print("Congratulations, you have unlocked a secret picture")
-					time.sleep(1)
-					img = DK(debug)
-					img.show()
-					os.system("cls")
 					menuChoice3 = False
 				elif choice == 10:
 					menuChoice2 = True
@@ -93,16 +88,16 @@ def Madlibs(debug = False):
 					print(Story2(debug))
 					input("Press Enter to continue")
 					os.system("cls")
-					print("Congratulations, you have unlocked a secret picture")
-					time.sleep(1)
-					img = DK(debug)
-					img.show()
-					os.system("cls")
 					menuChoice3 = False
 				if choice == 3:
 					menuChoice3 = True
 					print(Story3(debug))
 					input("Press Enter to continue")
+					os.system("cls")
+					print("Congratulations, you have unlocked a secret picture")
+					time.sleep(1)
+					img = DK(debug)
+					img.show()
 					os.system("cls")
 					menuChoice3 = False
 				elif choice == 10:
@@ -111,8 +106,9 @@ def Madlibs(debug = False):
 				else:
 					menuChoice3 = False
 		elif choice == 2:
-			print("Noice")
-		elif choice == 3:
 			quit()
+		else:
+			print("Hmmm try again")
+			menu = False
 	
 Madlibs()

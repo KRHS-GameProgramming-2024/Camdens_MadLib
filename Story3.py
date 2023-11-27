@@ -76,6 +76,7 @@ def Story3(debug = False):
 					os.system("cls")
 					action = False
 				print(Story3a(power, SP, EHP, UHP, debug))
+				print("You are strengthened through your drive") 
 			time.sleep(2)
 			if EHP <= 0:
 				print("ARG, how could I lose")
@@ -89,7 +90,10 @@ def Story3(debug = False):
 			if SP > 5:
 				SP = 5
 			print(Story3d(power, SP, EHP, UHP, debug))
-			defense += 1
+			if Phase == 1:
+				defense += 1
+			elif Phase == 2:
+				defense += 3
 			time.sleep(2)
 			action = True
 		elif act.lower() == "c":
@@ -215,4 +219,3 @@ def Story3(debug = False):
 				else:
 					print("What?")
 					time.sleep(2)
-
